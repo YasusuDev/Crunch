@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Character/CCharacter.h"
+#include "InputActionValue.h"
 #include "CPlayerCharacter.generated.h"
+
+class UInputAction;
 
 UCLASS()
 class ACPlayerCharacter : public ACCharacter
@@ -23,8 +26,13 @@ private:
 	class UCameraComponent* ViewCam;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Input")
-	class UInputAction* JumpInputAction;
+	UInputAction* JumpInputAction;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* LookInputAction;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Input")
 	class UInputMappingContext* GameplayInputMappingContext;
+
+	void  HandleLookInput(const FInputActionValue& InputActionValue);
 };
