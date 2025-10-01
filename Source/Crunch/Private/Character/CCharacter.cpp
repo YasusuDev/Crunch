@@ -1,8 +1,11 @@
  // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Character/CCharacter.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Components/WidgetComponent.h"
 #include "GAS/CAbilitySystemComponent.h"
 #include "GAS/CAttributeSet.h"
+#include "Widgets/OverHeadStatsGauge.h"
 
  ACCharacter::ACCharacter()
 {
@@ -11,6 +14,9 @@
 
 	CAbilitySystemComponent = CreateDefaultSubobject<UCAbilitySystemComponent>("CAbility System Component");
  	CAttributeSet = CreateDefaultSubobject<UCAttributeSet>("CAttribute Set") ;
+
+ 	OverHeadWidgetComponent = CreateDefaultSubobject<UWidgetComponent>("OverHead Widget");
+ 	OverHeadWidgetComponent->SetupAttachment(GetRootComponent());
 }
 
  void ACCharacter::ServerSideInit()
@@ -27,7 +33,7 @@
  void ACCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	ConfigureOverHeadStatsWidget();
 }
 
 void ACCharacter::Tick(float DeltaTime)
@@ -45,5 +51,15 @@ void ACCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
  UAbilitySystemComponent* ACCharacter::GetAbilitySystemComponent() const
  {
 	return CAbilitySystemComponent;
+ }
+
+ void ACCharacter::ConfigureOverHeadStatsWidget()
+ {
+	if (!IsValid(OverHeadWidgetComponent)) return;
+ 	
+	 if (UOverHeadStatsGauge* OverHeadStatsGauge = Cast<UOverHeadStatsGauge>(OverHeadWidgetComponent->GetUserWidgetObject()))
+ 	{
+ 		OverHeadStatsGauge->ConfigureWitASC(GetAbilitySystemComponent());
+ 	}
  }
 
