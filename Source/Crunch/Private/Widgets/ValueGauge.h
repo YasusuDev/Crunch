@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "AttributeSet.h"
+#include "GameplayEffectTypes.h"
 #include "ValueGauge.generated.h"
 
 UCLASS()
@@ -13,9 +15,16 @@ class UValueGauge : public UUserWidget
 
 public:
 	virtual void NativePreConstruct() override;
+	void SetAndBoundToGameplayAttributes(class UAbilitySystemComponent* AbilitySystemComponent, const FGameplayAttribute& Attribute, const FGameplayAttribute& MaxAttribute);
 	void SetValue(float NewValue, float NewMaxValue);
 	
 private:
+	void ValueChanged(const FOnAttributeChangeData& ChangedData);
+	void MaxValueChanged(const FOnAttributeChangeData& ChangedData);
+
+	float CachedValue;
+	float CachedMaxValue;
+	
 	UPROPERTY(EditAnywhere, Category= "Visual")
 	FLinearColor BarColor;
 	UPROPERTY(VisibleAnywhere, meta =(BindWidget))

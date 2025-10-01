@@ -11,9 +11,14 @@ class UGameplayWidget : public UUserWidget
 {
 	GENERATED_BODY()
 
+public:
+	virtual void NativeConstruct() override;	
 private:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	class UValueGauge* HealthBar;
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	class UValueGauge* ManaBar;
+
+	UPROPERTY()
+	class UAbilitySystemComponent* OwnerAbilitySystemComponent;
 };
