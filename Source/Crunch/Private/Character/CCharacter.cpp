@@ -13,7 +13,18 @@
  	CAttributeSet = CreateDefaultSubobject<UCAttributeSet>("CAttribute Set") ;
 }
 
-void ACCharacter::BeginPlay()
+ void ACCharacter::ServerSideInit()
+ {
+ 	CAbilitySystemComponent->InitAbilityActorInfo(this, this);
+ 	CAbilitySystemComponent->ApplyInitialEffects();
+ }
+
+ void ACCharacter::ClientSideInit()
+ {
+ 	CAbilitySystemComponent->InitAbilityActorInfo(this, this);
+ }
+
+ void ACCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
