@@ -5,6 +5,7 @@
 #include "Components/WidgetComponent.h"
 #include "GAS/CAbilitySystemComponent.h"
 #include "GAS/CAttributeSet.h"
+#include "Kismet/GameplayStatics.h"
 #include "Widgets/OverHeadStatsGauge.h"
 
  ACCharacter::ACCharacter()
@@ -82,6 +83,23 @@ void ACCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
  	{
  		OverHeadStatsGauge->ConfigureWitASC(GetAbilitySystemComponent());
 	 	OverHeadWidgetComponent->SetHiddenInGame(false);
+	 	GetWorldTimerManager().ClearTimer(HeadStatsGaugeVisibilityUpdateTimerHandle);
+	 	GetWorldTimerManager().SetTimer(
+	 		HeadStatsGaugeVisibilityUpdateTimerHandle,
+	 		this,
+	 		&ACCharacter::UpdateHeadStatsGaugeVisibility,
+	 		HeadStatsGaugeVisibilityCheckUpdateGap,
+	 		true
+	 	);
  	}
+ }
+
+ void ACCharacter::UpdateHeadStatsGaugeVisibility()
+ {
+ 	APawn* LocalPlayerPawn = UGameplayStatics::GetPlayerPawn(this, 0);
+ 	if (!IsValid(LocalPlayerPawn)) return;
+
+ 	float DistSquared = FVector::DistSquared(GetActorLocation(), LocalPlayerPawn->GetActorLocation());
+ 	OverHeadWidgetComponent->SetHiddenInGame(DistSquared > HeadStatsGaugeVisibilityRangeSquared);
  }
 
