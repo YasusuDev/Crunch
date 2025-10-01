@@ -12,10 +12,10 @@ class ACPlayerController : public APlayerController
 	GENERATED_BODY()
 
 public:
-	//Only called on the server.
-	virtual void OnPossess(APawn* InPawn) override;
-	//Only called on the client, also on the listening server.
-	virtual void AcknowledgePossession(class APawn* P) override;
+	// only called on the server
+	virtual void OnPossess(APawn* NewPawn) override;
+	// only called on the client, also on the linstening server.
+	virtual void AcknowledgePossession(APawn* NewPawn) override;
 
 private:
 	UPROPERTY()

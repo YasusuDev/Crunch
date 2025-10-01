@@ -5,7 +5,7 @@
 
 void UCAbilitySystemComponent::ApplyInitialEffects()
 {
-	if (!IsValid(GetOwner()) || !GetOwner()->HasAuthority()) return;
+	if (!IsValid(GetOwner()) || !GetOwner()->HasAuthority() || InitialEffects.IsEmpty()) return;
 	
 	for (const TSubclassOf<UGameplayEffect>& EffectClass : InitialEffects)
 	{

@@ -1,26 +1,28 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "Player/CPlayerController.h"
+#include "Player/CPlayerCharacter.h"
 
-#include "CPlayerCharacter.h"
-
-void ACPlayerController::OnPossess(APawn* InPawn)
+void ACPlayerController::OnPossess(APawn* NewPawn)
 {
-	Super::OnPossess(InPawn);
+	Super::OnPossess(NewPawn);
 
-	CPlayerCharacter = Cast<ACPlayerCharacter>(InPawn);
+	if (!IsValid(NewPawn)) return;
+	
+	CPlayerCharacter = Cast<ACPlayerCharacter>(NewPawn);
 	if (CPlayerCharacter)
 	{
 		CPlayerCharacter->ServerSideInit();
 	}
 }
 
-void ACPlayerController::AcknowledgePossession(class APawn* P)
+void ACPlayerController::AcknowledgePossession(APawn* NewPawn)
 {
-	Super::AcknowledgePossession(P);
+	Super::AcknowledgePossession(NewPawn);
 
-	CPlayerCharacter = Cast<ACPlayerCharacter>(P);
+	if (!IsValid(NewPawn)) return;
+	
+	CPlayerCharacter = Cast<ACPlayerCharacter>(NewPawn);
 	if (CPlayerCharacter)
 	{
 		CPlayerCharacter->ClientSideInit();

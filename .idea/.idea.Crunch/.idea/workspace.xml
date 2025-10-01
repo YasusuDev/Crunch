@@ -12,13 +12,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe6113b9-a42e-4149-a674-36dda289a941" name="Changes" comment="">
+    <list default="true" id="61f4e24a-6aa2-4b52-8ce8-7dd7082a788a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crunch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crunch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Player/CPlayerCharacter_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/CPlayerCharacter_BP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Character/CCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Character/CCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Character/CCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Character/CCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAbilitySystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAbilitySystemComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAbilitySystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAbilitySystemComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.h" afterDir="false" />
@@ -35,17 +34,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Editor/LevelEditor/Private/LevelEditorToolBar.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/CoreUObject/Public/UObject/ObjectMacros.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Engine/Classes/Engine/World.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Engine/Classes/Kismet/GameplayStatics.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/GameplayDebugger/Public/GameplayDebuggerCompat.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 6
 }]]></component>
-  <component name="ProjectId" id="33Ru6y2MHou0eq2DQ3lvWV8pYGW" />
+  <component name="ProjectId" id="33TKUBQQ7a1M1cn0YHoTQ9wUruR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -173,12 +168,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fe6113b9-a42e-4149-a674-36dda289a941" name="Changes" comment="" />
-      <created>1759292033781</created>
+      <changelist id="61f4e24a-6aa2-4b52-8ce8-7dd7082a788a" name="Changes" comment="" />
+      <created>1759335635607</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1759292033781</updated>
-      <workItem from="1759292035725" duration="4609000" />
+      <updated>1759335635607</updated>
+      <workItem from="1759335637012" duration="2668000" />
     </task>
     <servers />
   </component>

@@ -44,6 +44,6 @@ void ACCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
  UAbilitySystemComponent* ACCharacter::GetAbilitySystemComponent() const
  {
-	return GetAbilitySystemComponent();
+	return CAbilitySystemComponent;
  }
 
