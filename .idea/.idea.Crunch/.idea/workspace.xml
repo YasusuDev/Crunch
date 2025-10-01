@@ -14,13 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="61f4e24a-6aa2-4b52-8ce8-7dd7082a788a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crunch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crunch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Player/CPlayerCharacter_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/CPlayerCharacter_BP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Character/CCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Character/CCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAbilitySystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAbilitySystemComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/GAS/CAttributeSet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Private/Player/CPlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crunch.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Crunch.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Crunch/Crunch.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Crunch/Crunch.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1759335635607</updated>
-      <workItem from="1759335637012" duration="2668000" />
+      <workItem from="1759335637012" duration="4262000" />
     </task>
     <servers />
   </component>
