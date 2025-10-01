@@ -30,6 +30,21 @@
  	CAbilitySystemComponent->InitAbilityActorInfo(this, this);
  }
 
+ bool ACCharacter::IsLocallyControlledByPlayer() const
+ {
+ 	return GetController() && GetController()->IsLocalPlayerController();
+ }
+
+ void ACCharacter::PossessedBy(AController* NewController)
+ {
+ 	Super::PossessedBy(NewController);
+
+ 	if (NewController && !NewController->IsLocalPlayerController())
+ 	{
+ 		ServerSideInit();
+ 	}
+ }
+
  void ACCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -56,10 +71,17 @@ void ACCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
  void ACCharacter::ConfigureOverHeadStatsWidget()
  {
 	if (!IsValid(OverHeadWidgetComponent)) return;
+
+	if (IsLocallyControlledByPlayer())
+	{
+		OverHeadWidgetComponent->SetHiddenInGame(true);
+		return;
+	}
  	
 	 if (UOverHeadStatsGauge* OverHeadStatsGauge = Cast<UOverHeadStatsGauge>(OverHeadWidgetComponent->GetUserWidgetObject()))
  	{
  		OverHeadStatsGauge->ConfigureWitASC(GetAbilitySystemComponent());
+	 	OverHeadWidgetComponent->SetHiddenInGame(false);
  	}
  }
 
